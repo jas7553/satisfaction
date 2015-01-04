@@ -24,33 +24,47 @@ class DefragViewController: UIViewController, UICollectionViewDataSource, UIColl
     private let cellSize: CGFloat = 45
     
     // MARK: Model
-    private let model: BubbleSorter<Int>?
+    private var model: BubbleSorter<Int>?
+    
+    private func modelChangeCallback(sorter: BubbleSorter<Int>, updatedIndexes: [Int]) {
+        var indexPaths: [NSIndexPath] = []
+        for index in updatedIndexes {
+            let indexPath = NSIndexPath(forRow: index, inSection: 0)
+            indexPaths.append(indexPath)
+        }
+        collectionView.reloadItemsAtIndexPaths(indexPaths)
+        
+        sorter.next()
+    }
+    
+    private func completionCallback() {
+        defragButton.setTitle("Done", forState: .Normal)
+        defragButton.enabled = true
+    }
     
     // MARK: Initializer
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        initializeModel()
+    }
+    
+    private func initializeModel() {
+        var cellTypes: [Int] = listOfTypes(3, length: cellCount)
+        
+        model = BubbleSorter(list: cellTypes,
+            modelChangeCallback: modelChangeCallback,
+            completionCallback: completionCallback)
+    }
+    
+    private func listOfTypes(typeCount: Int, length: Int) -> [Int]{
         var cellTypes: [Int] = []
-        for _ in 0..<cellCount {
-            let randomCellType = Int(arc4random_uniform(3))
+        for _ in 0..<length {
+            let randomCellType = Int(arc4random_uniform(UInt32(typeCount)))
             cellTypes.append(randomCellType)
         }
-        
-        self.model = BubbleSorter(list: cellTypes,
-            modelChangeCallback: { (sorter, updatedIndexes) in
-                var indexPaths: [NSIndexPath] = []
-                for index in updatedIndexes {
-                    let indexPath = NSIndexPath(forRow: index, inSection: 0)
-                    indexPaths.append(indexPath)
-                }
-                self.collectionView.reloadItemsAtIndexPaths(indexPaths)
-                
-                sorter.next()
-            },
-            completionCallback: {
-                self.defragButton.setTitle("Done", forState: .Disabled)
-        })
+        return cellTypes
     }
     
     // MARK: UIViewController
@@ -64,16 +78,24 @@ class DefragViewController: UIViewController, UICollectionViewDataSource, UIColl
         collectionView.contentInset = UIEdgeInsets(top:10, left: 0, bottom: 10, right: 0)
         
         collectionView.userInteractionEnabled = false
-        
     }
     
     // MARK: IBAction
     
     @IBAction func defrag(sender: AnyObject) {
-        defragButton.enabled = false
-        defragButton.setTitle("Defragging...", forState: .Disabled)
-        
-        model!.sort()
+        if (model?.isSorted == true) {
+            initializeModel()
+            collectionView.reloadItemsAtIndexPaths(collectionView.indexPathsForVisibleItems())
+            
+            defragButton.setTitle("Defrag", forState: .Normal)
+            defragButton.enabled = true
+        }
+        else {
+            defragButton.enabled = false
+            defragButton.setTitle("Defragging...", forState: .Disabled)
+            
+            model!.sort()
+        }
     }
     
     // MARK: UICollectionViewDataSource

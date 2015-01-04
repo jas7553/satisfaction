@@ -13,6 +13,7 @@
 		96CDBFA51A587E7B000B1F77 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96CDBFA31A587E7B000B1F77 /* LaunchScreen.xib */; };
 		96CDBFB11A587E7B000B1F77 /* satisfactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDBFB01A587E7B000B1F77 /* satisfactionTests.swift */; };
 		96CDBFBB1A589130000B1F77 /* DefragViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDBFBA1A589130000B1F77 /* DefragViewController.swift */; };
+		96CDBFC11A58DE7B000B1F77 /* BubbleSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDBFC01A58DE7B000B1F77 /* BubbleSorter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		96CDBFAF1A587E7B000B1F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96CDBFB01A587E7B000B1F77 /* satisfactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = satisfactionTests.swift; sourceTree = "<group>"; };
 		96CDBFBA1A589130000B1F77 /* DefragViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefragViewController.swift; sourceTree = "<group>"; };
+		96CDBFC01A58DE7B000B1F77 /* BubbleSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleSorter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				96CDBFA11A587E7B000B1F77 /* Images.xcassets */,
 				96CDBFA31A587E7B000B1F77 /* LaunchScreen.xib */,
 				96CDBF981A587E7B000B1F77 /* Supporting Files */,
+				96CDBFC01A58DE7B000B1F77 /* BubbleSorter.swift */,
 			);
 			path = satisfaction;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96CDBF9B1A587E7B000B1F77 /* AppDelegate.swift in Sources */,
+				96CDBFC11A58DE7B000B1F77 /* BubbleSorter.swift in Sources */,
 				96CDBFBB1A589130000B1F77 /* DefragViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

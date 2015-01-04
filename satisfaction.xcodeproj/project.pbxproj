@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		960CA2F81A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.52 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = 960CA2F51A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.52 AM.png */; };
+		960CA2F91A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.48 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = 960CA2F61A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.48 AM.png */; };
+		960CA2FA1A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.43 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = 960CA2F71A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.43 AM.png */; };
 		96CDBF9B1A587E7B000B1F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDBF9A1A587E7B000B1F77 /* AppDelegate.swift */; };
 		96CDBFA01A587E7B000B1F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CDBF9E1A587E7B000B1F77 /* Main.storyboard */; };
 		96CDBFA21A587E7B000B1F77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CDBFA11A587E7B000B1F77 /* Images.xcassets */; };
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		960CA2F51A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.52 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS Simulator Screen Shot Jan 4, 2015, 12.46.52 AM.png"; sourceTree = "<group>"; };
+		960CA2F61A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.48 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS Simulator Screen Shot Jan 4, 2015, 12.46.48 AM.png"; sourceTree = "<group>"; };
+		960CA2F71A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.43 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS Simulator Screen Shot Jan 4, 2015, 12.46.43 AM.png"; sourceTree = "<group>"; };
 		96CDBF951A587E7B000B1F77 /* satisfaction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = satisfaction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CDBF991A587E7B000B1F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96CDBF9A1A587E7B000B1F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,9 +64,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		960CA2F41A59359B0080878A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				960CA2F51A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.52 AM.png */,
+				960CA2F61A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.48 AM.png */,
+				960CA2F71A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.43 AM.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		96CDBF8C1A587E7A000B1F77 = {
 			isa = PBXGroup;
 			children = (
+				960CA2F41A59359B0080878A /* images */,
 				96CDBF971A587E7B000B1F77 /* satisfaction */,
 				96CDBFAD1A587E7B000B1F77 /* satisfactionTests */,
 				96CDBF961A587E7B000B1F77 /* Products */,
@@ -196,8 +213,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				96CDBFA01A587E7B000B1F77 /* Main.storyboard in Resources */,
+				960CA2F91A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.48 AM.png in Resources */,
+				960CA2F81A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.52 AM.png in Resources */,
 				96CDBFA51A587E7B000B1F77 /* LaunchScreen.xib in Resources */,
 				96CDBFA21A587E7B000B1F77 /* Images.xcassets in Resources */,
+				960CA2FA1A5935B50080878A /* iOS Simulator Screen Shot Jan 4, 2015, 12.46.43 AM.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +431,7 @@
 				96CDBFB61A587E7B000B1F77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96CDBFB71A587E7B000B1F77 /* Build configuration list for PBXNativeTarget "satisfactionTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +440,7 @@
 				96CDBFB91A587E7B000B1F77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -34,6 +34,7 @@ class BubbleSorter<T: Comparable> {
     private var n: Int = 0
     private var newN: Int = 0
     private var resetN = true
+    private(set) var isSorted: Bool
     
     /// MARK: Initialization
     
@@ -44,6 +45,7 @@ class BubbleSorter<T: Comparable> {
         self.completionCallback = completionCallback
         
         self.n = self.list.count
+        self.isSorted = false
     }
     
     /// MARK: Start and advancement of the sorting state machine
@@ -65,6 +67,7 @@ class BubbleSorter<T: Comparable> {
         
         if n <= 0 {
             dispatch_async(dispatch_get_main_queue(), {
+                self.isSorted = true
                 self.completionCallback()
             })
             return
@@ -97,6 +100,7 @@ class BubbleSorter<T: Comparable> {
         
         if n <= 0 {
             dispatch_async(dispatch_get_main_queue(), {
+                self.isSorted = true
                 self.completionCallback()
             })
         }

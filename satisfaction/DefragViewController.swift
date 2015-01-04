@@ -11,6 +11,7 @@ import UIKit
 class DefragViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var defragButton: UIButton!
     
     private let redColor = UIColor(red: 0.8902, green: 0.2549, blue: 0.2667, alpha: 1)
     private let greenColor = UIColor(red: 0.2431, green: 0.7882, blue: 0.3216, alpha: 1)
